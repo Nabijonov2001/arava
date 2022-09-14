@@ -12,7 +12,7 @@ import config from "./config/config";
 const app = express();
 let server: any;
 
-if (config.NodeEnv === "production") {
+if (config.NodeEnv === "development") {
 	const credentials = {
 		key: readFileSync("/etc/letsencrypt/live/api.arava.app/privkey.pem", "utf8"),
 		cert: readFileSync("/etc/letsencrypt/live/api.arava.app/cert.pem", "utf8"),
