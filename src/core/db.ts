@@ -13,7 +13,8 @@ db.once("open", () => {
 });
 
 export default class Database {
-	private url = config.MongoUrl;
+	// private url = config.MongoUrl;
+	private url = `mongodb://${config.MongoUser}:${config.MongoPassword}@127.0.0.1:${config.MongoPort}/${config.MongoDatabase}`;
 
 	constructor() {
 		logger.info(`DB: DATABASE URL: ${this.url}`);
