@@ -14,10 +14,11 @@ let server: any;
 
 if (config.NodeEnv === "development") {
 	const credentials = {
-		key: readFileSync("/etc/letsencrypt/live/api.arava.app/privkey.pem", "utf8"),
-		cert: readFileSync("/etc/letsencrypt/live/api.arava.app/cert.pem", "utf8"),
-		ca: readFileSync("/etc/letsencrypt/live/api.arava.app/chain.pem", "utf8")
+		key: readFileSync("/etc/letsencrypt/live/backend.birzoom.uz/privkey.pem", "utf8"),
+		cert: readFileSync("/etc/letsencrypt/live/backend.birzoom.uz/cert.pem", "utf8"),
+		ca: readFileSync("/etc/letsencrypt/live/backend.birzoom.uz/chain.pem", "utf8")
 	};
+	server = https.createServer(credentials, app);
 
 	server = https.createServer(credentials, app);
 } else {
