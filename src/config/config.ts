@@ -16,12 +16,12 @@ interface Config {
 }
 
 const config: Config = {
-	HttpPort: getConf("HTTP_PORT", "3000"),
+	HttpPort: getConf("HTTP_PORT", "8000"),
 	MongoHost: getConf("MONGO_HOST", "localhost"),
 	MongoPort: parseInt(getConf("MONGO_PORT", "27017")),
-	MongoDatabase: getConf("MONGO_DATABASE", "AravaGent"),
-	MongoPassword: getConf("MONGO_PASSWORD", ""),
-	MongoUser: getConf("MONGO_USER", ""),
+	MongoDatabase: getConf("MONGO_DATABASE", "tmk_project"),
+	MongoPassword: getConf("MONGO_PASSWORD", "rounded-super-pwd"),
+	MongoUser: getConf("MONGO_USER", "rounded"),
 	MongoUrl: getConf("MONGO_URL", "mongodb://localhost:27217/AravaGent"),
 	NodeEnv: getConf("NODE_ENV", "development"),
 	JwtSecret: getConf("JwtSecret", "JwtSecret"),
