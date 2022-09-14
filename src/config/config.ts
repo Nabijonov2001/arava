@@ -16,7 +16,7 @@ interface Config {
 }
 
 const config: Config = {
-	HttpPort: getConf("HTTP_PORT", "8000"),
+	HttpPort: getConf("HTTP_PORT", "3000"),
 	MongoHost: getConf("MONGO_HOST", "localhost"),
 	MongoPort: parseInt(getConf("MONGO_PORT", "27017")),
 	MongoDatabase: getConf("MONGO_DATABASE", "tmk_project"),
